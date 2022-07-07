@@ -1,28 +1,23 @@
 from flask import Flask
-from flask import request, render_template, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
+from flask import request, render_template, redirect, url_for, escape
+
 
 app = Flask(__name__)
 
-# Settings
-app = Flask(__name__)
-app.config['DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/appdb'
-db = SQLAlchemy(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return '<h1>Home</h1>'
+    return '<h1>Hello Totoro!</h1><img src="http://helloflask.com/totoro.gif">'
 
 
 @app.route('/signin', methods=['GET'])
 def signin_form():
-    return '''<form action="/signin" method="post">
+    return escape('''<form action="/signin" method="post">
               <p><input name="username"></p>
               <p><input name="password" type="password"></p>
               <p><button type="submit">Sign In</button></p>
-              </form>'''
+              </form>''')
 
 
 @app.route('/signin', methods=['POST'])
