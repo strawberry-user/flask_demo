@@ -54,7 +54,7 @@ def forge():
         db.session.add(movie)
 
     db.session.commit()
-    click.echo('Done.')
+    click.echo('测试Done.')
 
 
 class User(db.Model):  # 表名将会是 user（自动生成，小写处理）
