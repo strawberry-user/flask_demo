@@ -41,7 +41,7 @@ def forge():
         {'title': 'My Neighbor Totoro', 'year': '1988'},
         {'title': 'Dead Poets Society', 'year': '1989'},
         {'title': 'A Perfect World', 'year': '1993'},
-        {'title': 'Leon', 'year': '1994'},
+        {'title': 'Leo', 'year': '1994'},
         {'title': 'Mahjong', 'year': '1996'},
         {'title': 'Swallowtail Butterfly', 'year': '1996'},
         {'title': 'King of Comedy', 'year': '1999'},
