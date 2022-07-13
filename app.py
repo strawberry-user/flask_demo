@@ -1,7 +1,10 @@
+import json
 import os
 from flask import Flask, render_template, request, url_for, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 import click
+import requests
+
 
 
 app = Flask(__name__)
@@ -24,7 +27,7 @@ def initdb(drop):
     if drop:  # 判断是否输入了选项
         db.drop_all()
     db.create_all()
-    click.echo('Initialized database.')  # 输出提示信息
+    click.echo('Initialized database.111')  # 输出提示信息
 
 
 @app.cli.command()
