@@ -27,7 +27,7 @@ def initdb(drop):
     if drop:  # 判断是否输入了选项
         db.drop_all()
     db.create_all()
-    click.echo('Initialized database.111')  # 输出提示信息
+    click.echo('Initialized database.11')  # 输出提示信息
 
 
 @app.cli.command()
