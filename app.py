@@ -21,7 +21,7 @@ def load_user(user_id):  # 创建用户加载回调函数，接受用户 ID 作�
     return user  # 返回用户对象
 
 
-app.config['SECRET_KEY'] = 'dev'  # 等同于 app.secret_key = 'dev'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev')
 
 
 # 使用方法：
